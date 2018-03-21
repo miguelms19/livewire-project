@@ -1,6 +1,19 @@
 {
-  "name": "Livewire Portfolio",
-  "description": "Livewire portfolio app built with Django",
-  "repository": "https://github.com/driftyco/ionic-heroku-button",
-  "keywords": ["Django", "Portfolio"]
+  "name": "heroku-django-skeleton",
+  "description": "A simple project to get started with Django on Heroku",
+  "repository": "https://github.com/michaelmior/heroku-django-skeleton",
+  "keywords": ["python", "django", "template", "skeleton"],
+  "env": {
+    "DJANGO_SECRET_KEY": {
+      "description": "A randomly generated secret to secure your Django installation",
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    "newrelic:wayne",
+    "heroku-redis:hobby-dev"
+  ],
+  "scripts": {
+    "postdeploy": "python manage.py migrate --noinput"
+  }
 }
