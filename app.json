@@ -9,10 +9,7 @@
       "generator": "secret"
     }
   },
-  "addons": [
-    "newrelic:wayne",
-    "heroku-redis:hobby-dev"
-  ],
+  
   "scripts": {
     "postdeploy": "python manage.py migrate --noinput"
   }
