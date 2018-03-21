@@ -2,55 +2,36 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!-->
+{% load staticfiles %}
+{% load static %}
+<html class="no-js"> <!--<![endif]-->
 
 
   <head>
-  {% load staticfiles %}
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
 	<title>Livewire - Web Development</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
 
 
 
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
 
-	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-	<link rel="shortcut icon" href="favicon.ico">
-
-	<!-- <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'> -->
 
 	<!-- Animate.css -->
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/animate.css" />
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}" >
 	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/icomoon.css" />
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}" />
 	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/bootstrap.css" />
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
 	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/owl.carousel.min.css" />
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/owl.theme.default.min.css" />
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" />
 
-	<link rel="stylesheet" href="{{ STATIC_URL }}/css/style.css" />
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
 
 	<!-- Modernizr JS -->
-	<script src="{{ STATIC_URL }}/js/modernizr-2.6.2.min.js" ></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}" ></script>
+
 
 	</head>
 	<body>
@@ -70,8 +51,7 @@
 			</nav>
 		</div>
 	</header>
-
-	<div class="fh5co-parallax" style="background-image: url(images/defaultindex.jpg);" data-stellar-background-ratio="0.5"><img src="{% static 'defaultindex.jpg' %}" />
+  <div class="fh5co-parallax" style="background-image: url( {% static 'images/defaultindex.jpg' %} );" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -84,8 +64,7 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="fh5co-intro-section">
+  <div id="fh5co-intro-section">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
@@ -120,7 +99,7 @@
 			</div>
 		</div>
 	</div><!-- end fh5co-common-section -->
-	<div class="fh5co-parallax" style="background-image: url(images/code.jpg);" data-stellar-background-ratio="0.5">
+  <div class="fh5co-parallax" style="background-image: url({% static 'images/code.jpg' %});" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
@@ -177,7 +156,7 @@
 
 				<div class="col-md-4 text-center">
 					<div class="fhco-hero2">
-						<img class="img-responsive" src="images/iphone6.png" alt="iphone6">
+						<img class="img-responsive" src="{% static 'images/iphone6.png' %}" alt="iphone6">
 					</div>
 				</div>
 
@@ -227,7 +206,7 @@
 			<div class="owl-carousel owl-carousel2">
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="images/portfolio_pic1.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic1.jpg' %}" alt="image">
 					<a href="#" class="pop-up-overlay text-center">
 						<div class="desc">
 							<h3>Camera</h3>
@@ -236,7 +215,7 @@
 					</a>
 				</div>
 				<div class="item">
-					<img src="images/portfolio_pic2.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic2.jpg' %}" alt="image">
 					<a href="#" class="pop-up-overlay pop-up-overlay-color-2 text-center">
 						<div class="desc">
 							<h3>Workstation</h3>
@@ -246,7 +225,7 @@
 				</div>
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="images/portfolio_pic3.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic3.jpg' %}" alt="image">
 					<!-- </a> -->
 					<a href="#" class="pop-up-overlay pop-up-overlay-color-3 text-center">
 						<div class="desc">
@@ -257,7 +236,7 @@
 				</div>
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="images/portfolio_pic4.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic4.jpg' %}" alt="image">
 					<!-- </a> -->
 					<a href="#" class="pop-up-overlay pop-up-overlay-color-4 text-center">
 						<div class="desc">
@@ -268,7 +247,7 @@
 				</div>
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="images/portfolio_pic5.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic5.jpg' %}" alt="image">
 					<!-- </a> -->
 					<a href="#" class="pop-up-overlay text-center">
 						<div class="desc">
@@ -279,7 +258,7 @@
 				</div>
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="images/portfolio_pic6.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic6.jpg' %}" alt="image">
 					<!-- </a> -->
 					<a href="#" class="pop-up-overlay pop-up-overlay-color-2 text-center">
 						<div class="desc">
@@ -290,7 +269,7 @@
 				</div>
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="images/portfolio_pic7.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic7.jpg' %}" alt="image">
 					<!-- </a> -->
 					<a href="#" class="pop-up-overlay text-center">
 						<div class="desc">
@@ -301,7 +280,7 @@
 				</div>
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="images/portfolio_pic8.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic8.jpg' %}" alt="image">
 					<!-- </a> -->
 					<a href="#" class="pop-up-overlay pop-up-overlay-color-3 text-center">
 						<div class="desc">
@@ -312,7 +291,7 @@
 				</div>
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="images/portfolio_pic9.jpg" alt="image">
+					<img src="{% static 'images/portfolio_pic9.jpg' %}" alt="image">
 					<!-- </a> -->
 					<a href="#" class="pop-up-overlay pop-up-overlay-color-4 text-center">
 						<div class="desc">
@@ -351,25 +330,25 @@
 			</div>
 		</div>
 	</div><!-- end: fh5co-blog-section -->
-	<div class="fh5co-parallax" style="background-image: url(images/webdevelopment-bg.jpg);" data-stellar-background-ratio="0.5">
+	<div class="fh5co-parallax" style="background-image: url({% static 'images/webdevelopment-bg.jpg' %});" data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
 					<div class="fh5co-intro fh5co-table-cell">
 						<h1 class="text-center">Less is more</h1>
-						<p>Made with love by the fine folks at <a href="http://freehtml5.co">FreeHTML5.co</a></p>
+						<p>Made with love by the fine folks at Livewire Web Developments</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div><!-- end: fh5co-parallax -->
-	<footer>
+  <footer>
 		<div id="footer" class="fh5co-border-line">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center">
-						<p>Copyright 2016 Free Html5 <a href="#">Neos</a>. All Rights Reserved. <br>Made with <i class="icon-heart3 love"></i> by <a href="http://freehtml5.co/" target="_blank">Freehtml5.co</a> / Demo Images: <a href="https://www.pexels.com/" target="_blank">Pexels</a> &amp; <a href="http://plmd.me/" target="_blank">PLMD</a> </p>
+						<p>Copyright &copy; {% now "Y" %} Livewire Web developments . All Rights Reserved.
 						<p class="fh5co-social-icons">
 							<a href="#"><i class="icon-twitter-with-circle"></i></a>
 							<a href="#"><i class="icon-facebook-with-circle"></i></a>
@@ -380,26 +359,21 @@
 			</div>
 		</div>
 	</footer>
-
-
-
-
-	<!-- jQuery -->
-
-	<script src="jobs/js/jquery.min.js"></script>
+  <!-- jQuery -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
 	<!-- jQuery Easing -->
-	<script src="jobs/js/jquery.easing.1.3.js"></script>
+	<script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
 	<!-- Bootstrap -->
-	<script src="jobs/js/bootstrap.min.js"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
 	<!-- Waypoints -->
-	<script src="jobs/js/jquery.waypoints.min.js"></script>
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
 	<!-- Owl carousel -->
-	<script src="jobs/js/owl.carousel.min.js"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
 	<!-- Stellar -->
-	<script src="js/jquery.stellar.min.js"></script>
+	<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
 
 	<!-- Main JS (Do not remove) -->
-	<script src="js/main.js"></script>
+	<script src="{% static 'js/main.js' %}"></script>
 
 	</body>
 </html>
