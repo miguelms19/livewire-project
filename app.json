@@ -1,0 +1,6 @@
+{
+  "name": "Livewire Portfolio",
+  "description": "Livewire portfolio app built with Django",
+  "repository": "https://github.com/driftyco/ionic-heroku-button",
+  "keywords": ["Django", "Portfolio"]
+}
