@@ -3,14 +3,6 @@
   "description": "A simple project to get started with Django on Heroku",
   "repository": "https://github.com/michaelmior/heroku-django-skeleton",
   "keywords": ["python", "django", "template", "skeleton"],
-  "env": {
-    "DJANGO_SECRET_KEY": {
-      "description": "A randomly generated secret to secure your Django installation",
-      "generator": "secret"
-    }
-  },
   
-  "scripts": {
-    "postdeploy": "python manage.py migrate --noinput"
-  }
+  },
 }
