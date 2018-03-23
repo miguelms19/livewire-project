@@ -6,3 +6,9 @@ from .models import Job
 def home(request):
     jobs = Job.objects
     return render(request, 'jobs/home.html', {'jobs':jobs})
+
+def services(request):
+    return render(request, 'jobs/services.html')
+
+def about(request):
+    return render(request, 'jobs/about.html')

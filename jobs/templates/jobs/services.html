@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+{% load staticfiles %}
+{% load static %}
+<html class="no-js"> <!--<![endif]-->
+
+
+  <head>
+
+
+	<title>Livewire - Web Development</title>
+
+
+
+
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}" >
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}" />
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" />
+
+	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'js/modernizr-2.6.2.min.js' %}" ></script>
+
+
+	</head>
+	<body>
+	<header>
+		<div class="container text-center">
+			<div class="fh5co-navbar-brand">
+				<a class="fh5co-logo" href="{% url 'home' %}">Livewire</a>
+			</div>
+			<nav id="fh5co-main-nav" role="navigation">
+				<ul>
+					<li><a href="{% url 'home' %}" class="active">Home</a></li>
+					<li><a href="{% url 'allwork' %}">Work</a></li>
+					<li><a href="{% url 'services' %}">Services</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+  <div class="fh5co-parallax" style="background-image: url( {% static 'images/defaultindex.jpg' %} );" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-center fh5co-table">
+					<div class="fh5co-intro fh5co-table-cell">
+						<h1 class="text-center">Welcome to Livewire</h1>
+						<p>Web development for today's World</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div id="fh5co-services-section">
+		<div class="container">
+			<div class="row text-center">
+
+			<div class="heading-section text-center">
+				<h2>Our Services</h2>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-services-right">
+						<div class="fh5co-table2 text-center">
+							<div class="fh5co-table-cell2">
+								<i class="icon-heart3"></i>
+							</div>
+						</div>
+						<div class="holder-section">
+							<h3>Crafted With Love</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia </p>
+						</div>
+					</div>
+					<div class="fh5co-services-right">
+						<div class="fh5co-table2 fh5co-table2-color-2 text-center">
+							<div class="fh5co-table-cell2">
+								<i class="icon-laptop"></i>
+							</div>
+						</div>
+						<div class="holder-section">
+							<h3>Web Design</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia </p>
+						</div>
+					</div>
+					<div class="fh5co-services-right">
+						<div class="fh5co-table2 fh5co-table2-color-3 text-center">
+							<div class="fh5co-table-cell2">
+								<i class="icon-video"></i>
+							</div>
+						</div>
+						<div class="holder-section">
+							<h3>Video Editing</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia </p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 text-center">
+					<div class="fhco-hero2">
+						<img class="img-responsive" src="{% static 'images/iphone6.png' %}" alt="iphone6">
+					</div>
+				</div>
+
+				<div class="col-md-4 col-sm-6">
+					<div class="fh5co-services">
+						<div class="fh5co-table2 fh5co-table2-color-4 text-center">
+							<div class="fh5co-table-cell2">
+								<i class="icon-mobile"></i>
+							</div>
+						</div>
+						<div class="holder-section">
+							<h3>Mobile Optimization</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia </p>
+						</div>
+					</div>
+					<div class="fh5co-services">
+						<div class="fh5co-table2 fh5co-table2-color-5 text-center">
+							<div class="fh5co-table-cell2">
+								<i class="icon-gears"></i>
+							</div>
+						</div>
+						<div class="holder-section">
+							<h3>SEO</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia </p>
+						</div>
+					</div>
+					<div class="fh5co-services">
+						<div class="fh5co-table2 fh5co-table2-color-6 text-center">
+							<div class="fh5co-table-cell2">
+								<i class="icon-piechart"></i>
+							</div>
+						</div>
+						<div class="holder-section">
+							<h3>Web Analytic</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- end: fh5co-services-section -->
