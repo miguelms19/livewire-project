@@ -1,0 +1,8 @@
+{
+  "name": "heroku-django-skeleton",
+  "description": "A simple project to get started with Django on Heroku",
+  "repository": "https://github.com/michaelmior/heroku-django-skeleton",
+  "keywords": ["python", "django", "template", "skeleton"],
+  
+  },
+}
