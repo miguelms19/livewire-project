@@ -38,11 +38,11 @@
 	<header>
 		<div class="container text-center">
 			<div class="fh5co-navbar-brand">
-				<a class="fh5co-logo" href="home.html">Livewire</a>
+				<a class="fh5co-logo" href="{% url 'home' %}">Livewire</a>
 			</div>
 			<nav id="fh5co-main-nav" role="navigation">
 				<ul>
-					<li><a href="home.html" class="active">Home</a></li>
+					<li><a href="{% url 'home' %}" class="active">Home</a></li>
 					<li><a href="work.html">Work</a></li>
 					<li><a href="services.html">Services</a></li>
 					<li><a href="about.html">About</a></li>
@@ -206,31 +206,31 @@
 			<div class="owl-carousel owl-carousel2">
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="{% static 'images/portfolio_pic1.jpg' %}" alt="image">
-					<a href="#" class="pop-up-overlay text-center">
+					<img src="{% static 'images/aquashine.fw.png' %}" alt="image" height="400" width="350">
+					<a href="http://www.aqua-shine.co.uk" target="_blank" class="pop-up-overlay text-center">
 						<div class="desc">
-							<h3>Camera</h3>
-							<span>Video</span>
+							<h3>Aqua Shine</h3>
+							<span>Window Cleaning services</span>
 						</div>
 					</a>
 				</div>
 				<div class="item">
-					<img src="{% static 'images/portfolio_pic2.jpg' %}" alt="image">
-					<a href="#" class="pop-up-overlay pop-up-overlay-color-2 text-center">
+					<img src="{% static 'images/aht.fw.png' %}" alt="image" height="400" width="350">
+					<a href="http://www.ahtwindowcleaning.co.uk" target="_blank" class="pop-up-overlay pop-up-overlay-color-2 text-center">
 						<div class="desc">
-							<h3>Workstation</h3>
-							<span>Illustration</span>
+							<h3>AHT Window Cleaning</h3>
+							<span>Window Cleaning services</span>
 						</div>
 					</a>
 				</div>
 				<div class="item">
 					<!-- <a href="#" class="image-popup"> -->
-					<img src="{% static 'images/portfolio_pic3.jpg' %}" alt="image">
+					<img src="{% static 'images/ukasa.fw.png' %}" alt="image" height="400" width="350">
 					<!-- </a> -->
-					<a href="#" class="pop-up-overlay pop-up-overlay-color-3 text-center">
+					<a href="https://www.ukasa.org" target="_blank" class="pop-up-overlay pop-up-overlay-color-3 text-center">
 						<div class="desc">
-							<h3>Mobile Phone</h3>
-							<span>Web</span>
+							<h3>UKASA</h3>
+							<span>United Kingdom Airsoft Site Association</span>
 						</div>
 					</a>
 				</div>
