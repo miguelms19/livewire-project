@@ -9,6 +9,3 @@ def home(request):
 
 def services(request):
     return render(request, 'jobs/services.html')
-
-def about(request):
-    return render(request, 'jobs/about.html')

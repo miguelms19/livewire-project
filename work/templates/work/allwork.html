@@ -44,8 +44,8 @@
 				<ul>
 					<li><a href="{% url 'home' %}" >Home</a></li>
 					<li><a href="{% url 'allwork' %}" class="active">Work</a></li>
-					<li><a href="services.html">Services</a></li>
-					<li><a href="about.html">About</a></li>
+					<li><a href="{% url 'services' %}">Services</a></li>
+					<li><a href="{% url 'allteam' %}">About</a></li>
 					<li><a href="contact.html">Contact</a></li>
 				</ul>
 			</nav>
@@ -83,7 +83,7 @@
 					</div>
 				</div>
         {% endfor %}
-				
+
 				</div>
 			</div>
 		</div>
