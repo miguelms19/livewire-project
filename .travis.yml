@@ -30,6 +30,3 @@ before_script:
 
 after_success:
   - firebase deploy --token $FIREBASE_TOKEN
-
-script:
-  - python manage.py syncdb --noinput
