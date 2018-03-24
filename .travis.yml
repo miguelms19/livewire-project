@@ -23,12 +23,13 @@ before_install:
   - export PIP_USE_MIRRORS=true
 
 install:
-  - pip install requirements.txt
-  - pip install django==$DJANGO --quiet
-  - pip install psycopg2 --quiet
+  - npm install -g firebase-tools
 
 before_script:
   - psql -c "CREATE DATABASE portfoliodb;" -U postgres
+
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
 
 script:
   - python manage.py syncdb --noinput
