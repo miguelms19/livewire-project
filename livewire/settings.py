@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'j4s_1z9bread6!n2ck7scf!d4eggs^at$vs9g^of04%rdkwc#v+e%muga8*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -143,8 +143,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 # Configure Django App for Heroku.
-import django_heroku
-django_heroku.settings(locals())
+#import django_heroku
+#django_heroku.settings(locals())
 
-import django_heroku
-TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
+#TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
