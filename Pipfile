@@ -10,11 +10,6 @@ django = "*"
 gunicorn = "*"
 django-heroku = "*"
 
-Django==2.0.2
-Pillow==5.0.0
-psycopg2==2.7.4
-pytz==2018.3
-whitenoise==3.3.1
 
 [requires]
 
