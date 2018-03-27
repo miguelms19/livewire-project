@@ -1,1 +1,1 @@
-web: gunicorn livewire-project.wsgi --log-file -
+web: gunicorn livewire.wsgi --log-file -
