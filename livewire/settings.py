@@ -82,9 +82,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'livewiredb',
-        'USER':'postgres',
-        'PASSWORD':'ninonina44',
-        'HOST':'localhost',
+        'USER':'kqbbeocgaznqht',
+        'PASSWORD':'834f6d1557e067f35768e7139fc8822b92354ebb4ad915d2ccd99638e3a57619',
+        'HOST':'postgres://kqbbeocgaznqht:834f6d1557e067f35768e7139fc8822b92354ebb4ad915d2ccd99638e3a57619@ec2-174-129-206-173.compute-1.amazonaws.com:5432/d4l4escrnnm08v',
         'PORT':'5432',
     }
 }
