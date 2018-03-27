@@ -81,15 +81,15 @@ WSGI_APPLICATION = 'livewire.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'livewiredb',
+        'NAME': 'd4l4escrnnm08v',
         'USER':'kqbbeocgaznqht',
         'PASSWORD':'834f6d1557e067f35768e7139fc8822b92354ebb4ad915d2ccd99638e3a57619',
-        'HOST':'postgres://kqbbeocgaznqht:834f6d1557e067f35768e7139fc8822b92354ebb4ad915d2ccd99638e3a57619@ec2-174-129-206-173.compute-1.amazonaws.com:5432/d4l4escrnnm08v',
+        'HOST':'ec2-174-129-206-173.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
 
-
+#postgres://kqbbeocgaznqht:834f6d1557e067f35768e7139fc8822b92354ebb4ad915d2ccd99638e3a57619@ec2-174-129-206-173.compute-1.amazonaws.com:5432/d4l4escrnnm08v
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
