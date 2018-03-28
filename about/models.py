@@ -1,5 +1,6 @@
 from django.db import models
 from django.core.validators import URLValidator
+from PIL import ImageField
 
 # Create your models here.
 class Team(models.Model):
