@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'j4s_1z9bread6!n2ck7scf!d4eggs^at$vs9g^of04%rdkwc#v+e%muga8*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True 
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 #ALLOWED_HOSTS = ['livewire-webdev.herokuapp.com', '127.0.0.1']
@@ -82,13 +82,14 @@ WSGI_APPLICATION = 'livewire.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd4l4escrnnm08v',
-        'USER':'kqbbeocgaznqht',
-        'PASSWORD':'834f6d1557e067f35768e7139fc8822b92354ebb4ad915d2ccd99638e3a57619',
-        'HOST':'ec2-174-129-206-173.compute-1.amazonaws.com',
+        'NAME': 'da6hournl39ac6',
+        'USER':'xbzcsjcewqdejv',
+        'PASSWORD':'b0bcfd16dffce49f8296976038abdc000e522a54be340572a41b41395d6d9e5b',
+        'HOST':'ec2-174-129-225-9.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
+#postgres://xbzcsjcewqdejv:b0bcfd16dffce49f8296976038abdc000e522a54be340572a41b41395d6d9e5b@ec2-174-129-225-9.compute-1.amazonaws.com:5432/da6hournl39ac6
 
 #postgres://kqbbeocgaznqht:834f6d1557e067f35768e7139fc8822b92354ebb4ad915d2ccd99638e3a57619@ec2-174-129-206-173.compute-1.amazonaws.com:5432/d4l4escrnnm08v
 # Password validation
