@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'storages',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -162,18 +162,21 @@ MEDIA_URL = '/media/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-#DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-#AWS_STORAGE_BUCKET_NAME = 'livewire-project'
-#AWS_S3_REGION_NAME = 'eu-west-2'  # e.g. us-east-2
-#AWS_S3_ACCESS_KEY_ID = 'AKIAJYVWYO4J4RJK5GQA'
-#AWS_S3_SECRET_ACCESS_KEY = 'JS+QTkQaTMdRtWVaSomXANfh3mKtGVOPVe3NBUt6'
+DEFAULT_FILE_STORAGE = 'livewire.custom_storages.MediaStorage'
+AWS_STORAGE_BUCKET_NAME = 'livewire-project'
+AWS_S3_REGION_NAME = 'eu-west-2'  # e.g. us-east-2
+AWS_S3_ACCESS_KEY_ID = 'AKIAJYVWYO4J4RJK5GQA'
+AWS_S3_SECRET_ACCESS_KEY = 'JS+QTkQaTMdRtWVaSomXANfh3mKtGVOPVe3NBUt6'
 #AWS_STORAGE_BUCKET_NAME = 'livewire-project.media'
 # Tell django-storages the domain to use to refer to static files.
-#AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
 # Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
 # you run `collectstatic`).
-#STATICFILES_LOCATION = 'static'
-#STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+AWS_LOCATION = 'static'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 #MEDIAFILES_LOCATION = 'media'
