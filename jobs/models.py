@@ -1,6 +1,9 @@
 from django.db import models
 from django.core.validators import URLValidator
+<<<<<<< HEAD
 
+=======
+>>>>>>> 433127c4212e632bb3b770d11f3146fcdbed8699
 
 # Create your models here.
 class Job(models.Model):

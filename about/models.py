@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.validators import URLValidator
 
+
 # Create your models here.
 class Team(models.Model):
     #image = models.ImageField(upload_to='images/')
