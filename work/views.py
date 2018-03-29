@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
-from jobs.models import Job
+from jobs.models import Jobdetails
 # Create your views here.
 
 def allwork(request):
-    jobs = Job.objects
+    jobs = Jobdetails.objects
     return render(request, 'work/allwork.html', {'jobs':jobs})

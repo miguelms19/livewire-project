@@ -46,7 +46,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -79,13 +78,24 @@ WSGI_APPLICATION = 'livewire.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.postgresql',
+#        'NAME': 'da6hournl39ac6',
+#        'USER':'xbzcsjcewqdejv',
+#        'PASSWORD':'b0bcfd16dffce49f8296976038abdc000e522a54be340572a41b41395d6d9e5b',
+#        'HOST':'ec2-174-129-225-9.compute-1.amazonaws.com',
+#        'PORT':'5432',
+#    }
+#}
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'da6hournl39ac6',
-        'USER':'xbzcsjcewqdejv',
-        'PASSWORD':'b0bcfd16dffce49f8296976038abdc000e522a54be340572a41b41395d6d9e5b',
-        'HOST':'ec2-174-129-225-9.compute-1.amazonaws.com',
+        'NAME': 'livewiredb',
+        'USER':'postgres',
+        'PASSWORD':'ninonina44',
+        'HOST':'localhost',
         'PORT':'5432',
     }
 }
@@ -128,25 +138,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+#)
 
 
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'livewire/static/')
-]
+#STATICFILES_DIRS = [
+#    os.path.join(BASE_DIR, 'livewire/static/')
+#]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-
-#TEST_RUNNER = 'django_heroku.HerokuDiscoverRunner'
-#STATICFILES_STORAGE = \
-#    'whitenoise.django.GzipManifestStaticFilesStorage'
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
