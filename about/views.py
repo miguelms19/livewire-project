@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from about.models import Team
+from .models import Team
 # Create your views here.
 
 def allteam(request):
