@@ -27,12 +27,13 @@ SECRET_KEY = 'j4s_1z9bread6!n2ck7scf!d4eggs^at$vs9g^of04%rdkwc#v+e%muga8*'
 DEBUG = False
 
 #ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = ['livewire-webdev.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['livewire-webdev.herokuapp.com', '127.0.0.1', '*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'storages',
     'about.apps.AboutConfig',
     'work.apps.WorkConfig',
     'jobs.apps.JobsConfig',
@@ -106,6 +107,12 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
+AWS_S3_OBJECT_PARAMETERS = {
+    'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+    'CacheControl': 'max-age=94608000',
+}
+
+
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -160,5 +167,18 @@ MEDIA_URL = '/media/'
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 
-#iff we add compression it gives out server error 505
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+AWS_STORAGE_BUCKET_NAME = 'livewire-project'
+AWS_S3_REGION_NAME = 'eu-west-2'  # e.g. us-east-2
+AWS_ACCESS_KEY_ID = 'AKIAJYVWYO4J4RJK5GQA'
+AWS_SECRET_ACCESS_KEY = 'JS+QTkQaTMdRtWVaSomXANfh3mKtGVOPVe3NBUt6'
+
+# Tell django-storages the domain to use to refer to static files.
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+# Tell the staticfiles app to use S3Boto3 storage when writing the collected static files (when
+# you run `collectstatic`).
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+
+MEDIAFILES_LOCATION = 'media'
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
