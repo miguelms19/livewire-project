@@ -118,7 +118,7 @@
               {% for team in member.all%}
     					<div class="col-md-6 col-sm-6">
     						<div class="team-section-grid">
-                  <img src="{{ team.image.url }}" alt="Work" height="450" width="440" />
+                  <img src="{{ MEDIA_URL/team.image.url }}" alt="Work" height="450" width="440" />
                   <div class="overlay-section">
                 			<div class="desc">
     									<h3>{{team.name}}</h3>
