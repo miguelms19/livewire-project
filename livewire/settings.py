@@ -180,6 +180,6 @@ MEDIA_URL = '/media/'
 
 #MEDIAFILES_LOCATION = 'media'
 try:
-    from local_settings import *
+    from .local_settings import *
 except ImportError:
     pass
