@@ -179,3 +179,7 @@ MEDIA_URL = '/media/'
 #STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 #MEDIAFILES_LOCATION = 'media'
+try:
+    from local_settings import *
+except ImportError:
+    pass
