@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['livewire-webdev.herokuapp.com', '127.0.0.1']
 INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'work.apps.WorkConfig',
-    'jobs.apps.JobsConfig',
+    'jobs.apps.JobConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

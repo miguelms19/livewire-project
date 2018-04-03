@@ -3,7 +3,7 @@ from django.core.validators import URLValidator
 
 
 # Create your models here.
-class Jobdetails(models.Model):
+class Job(models.Model):
     image = models.ImageField(upload_to='images/', default='SOME STRING')
     title = models.CharField(max_length=255, blank=True)
     summary = models.CharField(max_length=2000)
