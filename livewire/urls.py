@@ -27,5 +27,6 @@ urlpatterns = [
     path('about/', include('about.urls')),
     path('contact/', jobs.views.contact, name='contact'),
     path('test/', jobs.views.test, name='test'),
+    path(r'^s3direct/', include('s3direct.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

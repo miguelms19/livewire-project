@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'storages',
+    's3direct',
 ]
 
 MIDDLEWARE = [
@@ -165,12 +165,33 @@ MEDIA_URL = '/media/'
 
 #DEFAULT_FILE_STORAGE = 'livewire.custom_storages.MediaStorage'
 #AWS_STORAGE_BUCKET_NAME = 'livewire-project'
-#AWS_S3_REGION_NAME = 'eu-west-2'  # e.g. us-east-2
-#AWS_S3_ACCESS_KEY_ID = 'AKIAJYVWYO4J4RJK5GQA'
-#AWS_S3_SECRET_ACCESS_KEY = 'JS+QTkQaTMdRtWVaSomXANfh3mKtGVOPVe3NBUt6'
-#AWS_STORAGE_BUCKET_NAME = 'livewire-project.media'
+S3DIRECT_REGION = 'eu-east-1'  # e.g. us-east-2
+AWS_ACCESS_KEY_ID = 'AKIAJYVWYO4J4RJK5GQA'
+AWS_SECRET_ACCESS_KEY = 'JS+QTkQaTMdRtWVaSomXANfh3mKtGVOPVe3NBUt6'
+AWS_STORAGE_BUCKET_NAME = 'livewire-media.media'
 # Tell django-storages the domain to use to refer to static files.
 #AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+S3DIRECT_DESTINATIONS = {
+    'example_destination': {
+        # REQUIRED
+        'key': 'media/images',
+
+        # OPTIONAL
+        'auth': lambda u: u.is_staff, # Default allow anybody to upload
+        'allowed': ['image/jpeg', 'image/png', 'video/mp4'],  # Default allow all mime types
+        'bucket': 'pdf-bucket', # Default is 'AWS_STORAGE_BUCKET_NAME'
+        'acl': 'private', # Defaults to 'public-read'
+        'cache_control': 'max-age=2592000', # Default no cache-control
+        'content_disposition': 'attachment',  # Default no content disposition
+        'content_length_range': (5000, 20000000), # Default allow any size
+        'server_side_encryption': 'AES256', # Default no encryption
+    },
+    'example_other': {
+        'key': lambda filename, args: args + '/' + filename,
+    	'key_args': 'uploads/images',  # Only if 'key' is a function
+    }
+}
 
 #AWS_S3_OBJECT_PARAMETERS = {
 #    'CacheControl': 'max-age=86400',
