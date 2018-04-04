@@ -12,3 +12,6 @@ def services(request):
 
 def contact(request):
     return render(request, 'jobs/contact.html')
+
+def test(request):
+    return render(request, 'jobs/test.html')
