@@ -11,7 +11,7 @@
   <head>
 
 
-	<title>testing - Web Development</title>
+	<title>Livewire - Web Development</title>
 
 
 
@@ -204,10 +204,108 @@
 				<h2>Our Projects</h2>
 			</div>
 
-			<div class="owl-carousel owl-carousel2">
+      <div class="owl-carousel owl-carousel2 autoPlay=5000 ">
+				<div class="item">
+					<!-- <a href="http://www.ahtwindowcleaning.co.uk" class="image-popup"> -->
+					<img src="{% static 'images/aht.fw.png' %}" alt="image" height="400" width="320">
+					<a href="http://www.ahtwindowcleaning.co.uk" class="pop-up-overlay text-center">
+						<div class="desc">
+							<h3>AHT Window Cleaning</h3>
+							<span>Window Cleaning services</span>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<img src="{% static 'images/aquashine.fw.png' %}" alt="image" height="400" width="320">
+					<a href="http://www.aqua-shine.co.uk" class="pop-up-overlay pop-up-overlay-color-2 text-center">
+						<div class="desc">
+							<h3>Aqua Shine</h3>
+							<span>Window Cleaning service</span>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<!-- <a href="#" class="image-popup"> -->
+					<img src="{% static 'images/ukasa.fw.png' %}" alt="image" height="400" width="320">
+					<!-- </a> -->
+					<a href="https://www.ukasa.org" class="pop-up-overlay pop-up-overlay-color-3 text-center">
+						<div class="desc">
+							<h3>UKASA</h3>
+							<span>United Kingdom Airsoft Site Association</span>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<!-- <a href="#" class="image-popup"> -->
+					<img src="{% static 'images/portfolio_pic4.jpg' %}" alt="image">
+					<!-- </a> -->
+					<a href="#" class="pop-up-overlay pop-up-overlay-color-4 text-center">
+						<div class="desc">
+							<h3>Camera Lens</h3>
+							<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<!-- <a href="#" class="image-popup"> -->
+					<img src="{% static 'images/portfolio_pic5.jpg' %}" alt="image">
+					<!-- </a> -->
+					<a href="#" class="pop-up-overlay text-center">
+						<div class="desc">
+							<h3>Card</h3>
+							<span>Card</span>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<!-- <a href="#" class="image-popup"> -->
+					<img src="{% static 'images/portfolio_pic6.jpg' %}" alt="image">
+					<!-- </a> -->
+					<a href="#" class="pop-up-overlay pop-up-overlay-color-2 text-center">
+						<div class="desc">
+							<h3>Shoes</h3>
+							<span>Brand</span>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<!-- <a href="#" class="image-popup"> -->
+					<img src="{% static 'images/portfolio_pic7.jpg' %}" alt="image">
+					<!-- </a> -->
+					<a href="#" class="pop-up-overlay pop-up-overlay-color-3 text-center">
+						<div class="desc">
+							<h3>Magazine</h3>
+							<span>Web</span>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<!-- <a href="#" class="image-popup"> -->
+					<img src="{% static 'images/portfolio_pic8.jpg' %}" alt="image">
+					<!-- </a> -->
+					<a href="#" class="pop-up-overlay pop-up-overlay-color-4 text-center">
+						<div class="desc">
+							<h3>VCard</h3>
+							<span>Card</span>
+						</div>
+					</a>
+				</div>
+				<div class="item">
+					<!-- <a href="#" class="image-popup"> -->
+					<img src="{% static 'images/portfolio_pic9.jpg' %}" alt="image">
+					<!-- </a> -->
+					<a href="#" class="pop-up-overlay text-center">
+						<div class="desc">
+							<h3>Paper</h3>
+							<span>Illustration</span>
+						</div>
+					</a>
+				</div>
+			</div>
+		<!--	<div class="owl-carousel owl-carousel2">
         {% for job in jobs.all %}
 				<div class="item">
-					<!--<a href="#" class="image-popup"> -->
+					#<a href="#" class="image-popup">
 
 					<img src="{{ job.image.url }}" alt="image" height="400" width="350">
 					<a href="{{ job.web }}" target="_blank" class="pop-up-overlay text-center">
@@ -218,7 +316,7 @@
 						</div>
 					</a>
 				</div>
-        {% endfor %}
+        {% endfor %} -->
 
 
 			</div>
@@ -264,6 +362,9 @@
 			</div>
 		</div>
 	</div><!-- end: fh5co-parallax -->
+  <p>
+    <hr>
+  <p>
   <footer>
 		<div id="footer" class="fh5co-border-line">
 			<div class="container">
