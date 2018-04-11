@@ -9,7 +9,8 @@ from django.shortcuts import render
 
 def home(request):
 #    jobs = AT.get_all()
-    return render(request, 'jobs/home.html', {'jobs': jobs})
+    #return render(request, 'jobs/home.html', {'jobs': jobs})
+    return render(request, 'jobs/home.html')
 
 def services(request):
     return render(request, 'jobs/services.html')
