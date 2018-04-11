@@ -6,7 +6,7 @@ from airtable import Airtable
 AT = Airtable('app722UkuB0eVMwVk',
               'Jobs',
               api_key='keyoOFryShWQQ1qGs')
-# Create your views here.
+
 
 def allwork(request):
     jobs = AT.get_all()

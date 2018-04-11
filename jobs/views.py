@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Job
+
 from airtable import Airtable
 
 AT = Airtable('app722UkuB0eVMwVk',
