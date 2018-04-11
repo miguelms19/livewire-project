@@ -1,11 +1,10 @@
 from django.shortcuts import render
-
 from airtable import Airtable
 
 AT = Airtable('app722UkuB0eVMwVk',
               'Jobs',
               api_key='keyoOFryShWQQ1qGs')
-#from .forms import S3DirectUploadForm
+
 # Create your views here.
 
 def home(request):

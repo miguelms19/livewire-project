@@ -1,4 +1,4 @@
-airtable
+airtable==0.3.1
 airtable-python-wrapper==0.8.0
 boto3==1.6.19
 botocore==1.9.19
