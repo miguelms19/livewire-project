@@ -1,14 +1,14 @@
 from django.shortcuts import render
-from airtable import Airtable
+#from airtable import Airtable
 
-AT = Airtable('app722UkuB0eVMwVk',
-              'Jobs',
-              api_key='keyoOFryShWQQ1qGs')
+#AT = Airtable('app722UkuB0eVMwVk',
+#              'Jobs',
+#              api_key='keyoOFryShWQQ1qGs')
 
 # Create your views here.
 
 def home(request):
-    jobs = AT.get_all()
+#    jobs = AT.get_all()
     return render(request, 'jobs/home.html', {'jobs': jobs})
 
 def services(request):
