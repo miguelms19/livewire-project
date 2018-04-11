@@ -4,10 +4,10 @@ from django.core.files.storage import FileSystemStorage
 
 
 
-fs = FileSystemStorage(location='/media/images')
+#fs = FileSystemStorage(location='/media/images')
 # Create your models here.
 class Job(models.Model):
-    image = models.ImageField(storage=fs)
+    image = models.ImageField(upload_to='jobsimages')
 
     title = models.CharField(max_length=255, blank=True)
     summary = models.CharField(max_length=2000)
