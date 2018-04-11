@@ -306,21 +306,22 @@
 					</a>
 				</div>
 			</div>
+    -->
 		<div class="owl-carousel owl-carousel2">
-        {% for job in jobs.all %}
+        {% for job in jobs %}
 				<div class="item">
-					#<a href="#" class="image-popup">
+					<a href="#" class="image-popup">
 
-					<img src="{{ job.image.url }}" alt="image" height="400" width="350">
-					<a href="{{ job.web }}" target="_blank" class="pop-up-overlay text-center">
+					<img src="{{ job.fields.Image.0.thumbnails.large.url  }}" alt="image" height="400" width="350">
+					<a href="{{ job.fields.Web }}" target="_blank" class="pop-up-overlay text-center">
 						<div class="desc">
-							<h3>{{ job.title }}</h3>
+							<h3>{{ job.fields.Title }}</h3>
 
-              <p class="card-text">{{ job.summary }} </p>
+              <p class="card-text">{{ job.fields.Summary }} </p>
 						</div>
 					</a>
 				</div>
-        {% endfor %} 
+        {% endfor %}
 
 
 			</div>

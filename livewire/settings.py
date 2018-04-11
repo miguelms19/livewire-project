@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'s3direct',
+
 ]
 
 MIDDLEWARE = [
@@ -80,16 +80,16 @@ WSGI_APPLICATION = 'livewire.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'da6hournl39ac6',
-        'USER':'xbzcsjcewqdejv',
-        'PASSWORD':'b0bcfd16dffce49f8296976038abdc000e522a54be340572a41b41395d6d9e5b',
-        'HOST':'ec2-174-129-225-9.compute-1.amazonaws.com',
-        'PORT':'5432',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'da6hournl39ac6',
+#         'USER':'xbzcsjcewqdejv',
+#         'PASSWORD':'b0bcfd16dffce49f8296976038abdc000e522a54be340572a41b41395d6d9e5b',
+#         'HOST':'ec2-174-129-225-9.compute-1.amazonaws.com',
+#         'PORT':'5432',
+#     }
+# }
 
 #DATABASES = {
 #    'default': {

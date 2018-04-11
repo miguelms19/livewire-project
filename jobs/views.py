@@ -1,13 +1,16 @@
 from django.shortcuts import render
 from .models import Job
+from airtable import Airtable
 
-
+AT = Airtable('app722UkuB0eVMwVk',
+              'Jobs',
+              api_key='keyoOFryShWQQ1qGs')
 #from .forms import S3DirectUploadForm
 # Create your views here.
 
 def home(request):
-    jobs = Job.objects
-    return render(request, 'jobs/home.html', {'jobs':jobs})
+    jobs = AT.get_all()
+    return render(request, 'jobs/home.html', {'jobs': jobs})
 
 def services(request):
     return render(request, 'jobs/services.html')
