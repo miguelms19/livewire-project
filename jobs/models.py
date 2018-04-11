@@ -3,7 +3,6 @@ from django.core.validators import URLValidator
 from django.core.files.storage import FileSystemStorage
 
 
-
 #fs = FileSystemStorage(location='/media/images')
 # Create your models here.
 class Job(models.Model):
