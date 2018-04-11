@@ -157,8 +157,8 @@ STATICFILES_DIRS = [
 
 #STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media2/images/upload')
+MEDIA_URL = 'media2/'
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
