@@ -5,7 +5,7 @@ verify_ssl = true
 
 
 [packages]
-
+airtable-python-wrapper = "*"
 django = "*"
 gunicorn = "*"
 django-heroku = "*"
@@ -14,7 +14,7 @@ psycopg2 = "*"
 psycopg2-binary = "*"
 pytz = "*"
 whitenoise = "*"
-airtable-python-wrapper = "*"
+
 
 [requires]
 
