@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *	Edit this section
 *
 * ======================================================= */
@@ -176,7 +176,7 @@ header #fh5co-main-nav > ul li a.active:before {
   content: '';
   top: -5px;
   right: -7px;
-  background: #F03861;
+  background: #23ce26;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
