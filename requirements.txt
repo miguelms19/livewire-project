@@ -2,7 +2,7 @@
 airtable-python-wrapper==0.8.0
 boto3==1.6.19
 botocore==1.9.19
-certifi==2018.1.18
+certifi==2022.12.7
 chardet==3.0.4
 Django==2.0.2
 django-storages==1.6.6
